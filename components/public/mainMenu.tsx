@@ -11,7 +11,13 @@ const PublicMainMenu = () => {
       <div className="body-container">
         <div className="flex items-center">
           <Link href={"/"}>
-            <Image src={"/logo.svg"} alt="My Logo" height={70} width={160} />
+            <Image
+              src={"/logo.svg"}
+              alt="My Logo"
+              height={70}
+              width={160}
+              className="w-40 h-auto"
+            />
           </Link>
           <ProductSearch />
           <div>

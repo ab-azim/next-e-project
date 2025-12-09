@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
-import PublicMainLayout from "@/components/layout/public/mainLayout";
 
 const robotoFont = Roboto({
   variable: "--font-roboto",
@@ -34,7 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${robotoFont.variable}  antialiased`}
         cz-shortcut-listen="true"
       >
-        <PublicMainLayout> {children}</PublicMainLayout>
+        {children}
       </body>
     </html>
   );
