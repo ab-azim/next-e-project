@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { Search } from "lucide-react";
@@ -6,34 +7,9 @@ import Link from "next/link";
 import StarGroup from "./starGroup";
 import { useEffect, useState } from "react";
 
-const searchDataList = [
-  {
-    id: "1",
-    title: "BREYLEE facial mask hyaluronic acid...",
-    image: "https://placehold.co/600x400",
-    ratting: 4,
-    price: 120,
-  },
-  {
-    id: "2",
-    title: "BREYLEE facial mask hyaluronic acid...",
-    image: "https://placehold.co/600x400",
-    ratting: 2,
-    price: 140,
-  },
-  {
-    id: "3",
-    title: "BREYLEE facial mask hyaluronic acid...",
-    image: "https://placehold.co/600x400",
-    ratting: 3,
-    price: 150,
-  },
-];
-
 const ProductSearch = () => {
   const [text, setText] = useState("");
   const [searchData, setSearchData] = useState([]);
-  console.log(searchData);
 
   useEffect(() => {
     // if (!text) {
@@ -72,11 +48,11 @@ const ProductSearch = () => {
           <div className="absolute top-full left-0 w-full  border flex flex-col justify-between">
             <div className="p-3 overflow-y-scroll h-78 ">
               {searchData.length == 0 && (
-                <div className="flex flex-col items-center justify-center">
-                  no data found
+                <div className="flex flex-col text-2xl mt-32 items-center justify-center">
+                  No data found
                 </div>
               )}
-              {searchData.map((item) => (
+              {searchData.map((item: any) => (
                 <div className="flex pb-3 mb-3 border-b" key={item.id}>
                   <div className="w-24">
                     <Image
@@ -110,6 +86,12 @@ const ProductSearch = () => {
           </div>
         )}
       </div>
+      {/* {text && (
+        <div
+          onClick={() => setText("")}
+          className="w-full h-screen fixed top-0 left-0 z-1 "
+        />
+      )} */}
     </div>
   );
 };

@@ -8,7 +8,7 @@ const PublicHeader = () => {
     <>
       <div className="bg-primary py-2">
         <div className=" body-container">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row  justify-between items-center">
             <Link
               className="flex items-center text-background gap-1"
               href={"/"}
