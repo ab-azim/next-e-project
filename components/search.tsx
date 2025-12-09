@@ -45,7 +45,7 @@ const ProductSearch = () => {
           <Search size={19} />
         </button>
         {text && (
-          <div className="absolute top-full left-0 w-full  border flex flex-col justify-between">
+          <div className="absolute z-2 bg-white top-full left-0 w-full  border flex flex-col justify-between">
             <div className="p-3 overflow-y-scroll h-78 ">
               {searchData.length == 0 && (
                 <div className="flex flex-col text-2xl mt-32 items-center justify-center">
